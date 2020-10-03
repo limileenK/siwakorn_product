@@ -1,0 +1,23 @@
+<nav class="navbar navbar-dark sticky-top grey lighten-5">
+    <a class="navbar-brand" href="#">
+        <div class="container">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Grab_%28application%29_logo.svg/1200px-Grab_%28application%29_logo.svg.png"
+                height="45" alt="mdb logo">
+        </div>
+    </a>
+</nav>
+<div class="container">
+   
+    <div class="row">
+ {{#each restaurants}}
+        <div class="col-4">
+            <div class="card ">
+                <img src=" {{this.imgURL}} " alt="" srcset="" width="100%"><br>
+                <label class="res"><h4> {{this.name}}</h4> </label><br>
+                <label for=""> {{this.type}} </label>
+            </div>
+        </div>
+ {{/each}}
+
+    </div>
+</div>
