@@ -1,4 +1,5 @@
 const express = require('express');
+const PORT = process.env.PORT || 8080;
 const restaurantRouter = require('./routes/restaurant');
 const hbs = require('express-handlebars');
 const routes = require('./routes/index');
@@ -14,6 +15,9 @@ app.use('/api', restaurantRouter);
 app.use('/', routes);
 
 
-app.listen(3000, () => {
-    console.log('Port 3000');
-});
+app.listen(
+    PORT,
+    () => {
+        console.log(`Listening to port ${PORT}`);
+    }
+);
